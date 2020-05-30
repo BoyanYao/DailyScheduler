@@ -1,0 +1,16 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /
+  static_files: www/login.html
+  upload: www/login.html
+
+- url: /calendar.html
+  static_files: www/calendar.html
+  upload: www/calendar.html
+
+- url: /(.*)
+  static_files: www/\1
+  upload: www/(.*)
